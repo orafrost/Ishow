@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <link href="/static/content.css" rel="stylesheet">
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/static/menu.css" />
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/menu.css" />
    <title>IShow</title>
 </head>
 <body>
@@ -27,34 +29,17 @@
                       <a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
                     </li>
                     <ul class="sub-menu collapse" id="service">
-                      <li>Soc</li>
-                      <li>Revelium</li>
-                      <li>Ikare</li>
-                      <li>Si</li>
+                      <li><a href="{% url "service_detail" 1 %}">Soc </a></li>
+                      <li><a href="{% url "service_detail" 2 %}">Revelium </a></li>
+                      <li><a href="{% url "service_detail" 3 %}">Ikare</a></li>
+                      <li><a href="{% url "service_detail" 4 %}">Si</a></li>
                     </ul>
-
-
-                    <li data-toggle="collapse" data-target="#new" class="collapsed">
-                      <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
-                    </li>
-                    <ul class="sub-menu collapse" id="new">
-                      <li>New New 1</li>
-                      <li>New New 2</li>
-                      <li>New New 3</li>
-                    </ul>
-
-
                      <li>
-                      <a href="#">
-                      <i class="fa fa-user fa-lg"></i> Profile
+                      <a href="/admin/">
+                      <i class="fa fa-user fa-lg"></i> Settings
                       </a>
                       </li>
 
-                     <li>
-                      <a href="#">
-                      <i class="fa fa-users fa-lg"></i> Users
-                      </a>
-                    </li>
                 </ul>
          </div>
     </div>

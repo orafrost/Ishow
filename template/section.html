@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div call="col-lg-9">
+<div class="row">
+{% for section in section_list %}
+  {% for server in section.server_set.all %}
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100">
+      <a href="/service"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+      <div class="card-body">
+        <h4 class="card-title">
+          <a href="/service">{{ server.name }}</a>
+        </h4>
+        <h5>{{ server.ip }}</h5>
+        <p class="card-text">{{ server.description }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+{% endfor %}
+</div>
+</div>
+{% endblock %}
