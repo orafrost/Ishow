@@ -1,0 +1,11 @@
+
+version: '2'
+
+services:
+  server:
+    build: ishow-server
+    image: ishow-server:latest
+    ports:
+      - 8000
+    volumes:
+      - /home/gverrier/Ishow:/home/sources/
