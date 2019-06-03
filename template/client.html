@@ -1,19 +1,22 @@
 {% extends "baseContent.html" %}
 
 {% block contentHead %}
+{% for server in section.serverclient_set.all %}
 <div class="col-md-auto row-title radius">
    {{ section.name }}
+   {{ section.contract }}
 </div>
+{% endfor %}
 {% endblock %}
 
 {% block contentCore %}
-{% for server in section.serverintern_set.all %}
+{% for server in section.serverclient_set.all %}
 <div class="col-lg-4 col-md-6 mb-4">
   <div class="card h-100">
-    <a href="{% url "server_detail" server.id  %}"><img class="card-img-top" src="/static/images/ubuntu.jpg" alt=""></a>
+    <a href="/service"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
     <div class="card-body">
       <h4 class="card-title">
-        <a href="{% url "server_detail" server.id  %}">{{ server.name }}</a>
+        <a href="/service">{{ server.name }}</a>
       </h4>
       <h5>{{ server.ip }}</h5>
       <p class="card-text">{{ server.description }}</p>

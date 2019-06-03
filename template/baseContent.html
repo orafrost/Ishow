@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-lg-auto">
+{% for section in section_list %}
+<div class="row justify-content-md-center">
+{% block contentHead %}
+{% endblock %}
+</div>
+<div class="row">
+  {% block contentCore %}
+  {% endblock %}
+</div>
+{% endfor %}
+
+</div>
+{% endblock %}

@@ -6,8 +6,6 @@ def dashboard(request):
     return render(request, 'index.html', {})
 
 def serviceDetail(request, service_id=0):
-    try:
-        section = Section.objects.filter(service__id=service_id)
-    except:
-        return HttpResponseNotFound('Error')
-    return render(request, 'section.html', {"section_list":section})
+    var = {}
+    var["section_list"] = Section.objects.filter(service__id=service_id)
+    return render(request, 'section.html', var)

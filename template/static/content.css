@@ -1,6 +1,30 @@
+
 #content {
   margin-left: 170px;
    margin-right: 20px;
    margin-top: 20px;
    margin-bottom: 20px;
+}
+
+.row-title {
+
+  background: #2e353df5;
+  color: #e1ffff;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.radius {
+  border-left-width: 4px;
+  border-radius: 7px;
+  margin-bottom: 5px;
+}
+
+.app-nav {
+  height: 200px;
+  overflow-y: auto;
+}
+
+.app-link {
+  margin: 10px;
 }
