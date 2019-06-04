@@ -2,7 +2,7 @@
 
 
 {% block content %}
-<div class="col-lg-auto">
+<div class="col-lg-auto block-marg">
 <div class="row-title radius">
 <div class="row justify-content-md-center">
   <div class="col-auto">
@@ -14,19 +14,17 @@
     {{ server.description }}
   </div>
 </div>
-{% for lien in app %}
-{% endfor %}
 </div>
 </div>
-<div clas="row ">
+<div class="col block-marg">
 <div class="col-sm-4">
   <div class="h-100">
     <img class="card-img-top radius" src="/static/images/ubuntu.jpg" alt="">
   </div>
 </div>
 <div class="row app-nav">
-{% for app in apps %}
-      <a class="col text-center app-link row-title radius" href="{{ app.url }}"> test {{ app.name }} </a>
+  {% for app in apps%}
+      <a class="col text-center app-link row-title radius" href="{{ app.url }}"  target="_blank" > test {{ app.name }} </a>
       <div class="w-100"></div>
 {% endfor %}
 </div>

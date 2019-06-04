@@ -1,5 +1,5 @@
 
-#content {
+content {
   margin-left: 170px;
    margin-right: 20px;
    margin-top: 20px;
@@ -8,7 +8,7 @@
 
 .row-title {
 
-  background: #2e353df5;
+  background-color: #2e353df5;
   color: #e1ffff;
   margin-left: 150px;
   margin-right: 150px;
@@ -21,10 +21,21 @@
 }
 
 .app-nav {
-  height: 200px;
+  height: 220px;
   overflow-y: auto;
 }
 
 .app-link {
   margin: 10px;
+  height: 25px;
+}
+
+.app-link:hover {
+    background-color: #2e353dc7;
+    color: #e1ffff;
+    text-decoration: none;
+}
+
+.block-marg {
+    margin-top: 30px;
 }
